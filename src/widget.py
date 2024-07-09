@@ -1,9 +1,10 @@
-from src.masks import get_mask_card_number, get_mask_account
 from datetime import datetime
+
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(number: str) -> str:
-    result = 0
+    result = ''
     if len(number.split()[-1]) == 16:
         mask_card = get_mask_card_number(number.split()[-1])
         result = f"{number[:-16]}{mask_card}"
