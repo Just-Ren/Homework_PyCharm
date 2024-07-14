@@ -14,7 +14,7 @@ def filter_by_state(list_of_dict: list[dict[str, Any]], state: str = "EXECUTED")
     список содержащий только те словари у которых ключ содержит переданное в функцию
     значение.
     """
-    return [d for d in list_of_dict if d.get("state") == state]
+    return [data_dict for data_dict in list_of_dict if data_dict.get("state") == state]
 
 
 def sort_by_date(list_of_dict: list[dict[str, Any]], reverse: bool = True) -> list[dict[str, Any]]:
@@ -24,7 +24,7 @@ def sort_by_date(list_of_dict: list[dict[str, Any]], reverse: bool = True) -> li
     """
     sorted_list = sorted(
         list_of_dict,
-        key=lambda new_list_of_dict: new_list_of_dict["date"],
+        key=lambda filtered_dicts: filtered_dicts["date"],
         reverse=reverse,
     )
     return sorted_list
