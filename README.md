@@ -20,7 +20,7 @@ The program uses the version Python 3.12.4
 ## Инструкция по установке
 1. *Чтобы скачать репозиторий*:
 
-   ```git clone https://github.com/Just-Ren/Homework_PyCharm/tree/feature/homework_10_1```
+   ```git clone https://github.com/Just-Ren/Homework_PyCharm.git```
 
 2. *Установить необходимые зависимости*
 
