@@ -29,10 +29,10 @@ The program uses the version Python 3.12.4
 3. Немного подождать
 
 ## *Команда проекта:*
-**Евгений Бабуркин** — *Back-End developer*
+**Евгений Бабуркин** - *Back-End developer*
 
 ### *Контакт для связи с командой разработки:*
-E-mail — ```evgenii.evgenii.01@mail.ru```
+E-mail - ```evgenii.evgenii.01@mail.ru```
 
 ### Источники
 [Программа создана при поддержке онлайн-школы](https://sky.pro/) ![SkyPro_Logo](https://static.tildacdn.com/tild3364-3965-4237-b664-363533643431/Group_1321317003.svg)
