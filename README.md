@@ -20,11 +20,11 @@ The program uses the version Python 3.12.4
 ## Инструкция по установке
 1. *Чтобы скачать репозиторий*:
 
-   ```git clone https://github.com/Just-Ren/Homework_PyCharm.git```
+   ```git clone https://github.com/Just-Ren/Homework_PyCharm/tree/feature/homework_10_1```
 
 2. *Установить необходимые зависимости*
 
-   ```pip install requirements.txt```
+   ```pip install -r requirements.txt```
 
 3. Немного подождать
 
