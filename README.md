@@ -24,7 +24,7 @@ The program uses the version Python 3.12.4
 
 2. *Установить необходимые зависимости*
 
-   ```pip install -r requirements.txt```
+   ```pip install requirements.txt```
 
 3. Немного подождать
 
