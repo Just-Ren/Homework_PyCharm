@@ -10,10 +10,10 @@ def logging(filename=None):
         def wrapper(*args, **kwargs):
             try:
                 result = func(*args, **kwargs)
-                if filename != None:
+                if filename is not None:
                     with open(filename, "a") as mylog:
                         mylog.write(f"{func. __name__} ok\n")
-                elif filename == None:
+                elif filename is None:
                     print(f"{func, __name__} ok")
                 return result
             except Exception as e:
@@ -26,11 +26,12 @@ def logging(filename=None):
     return decorator
 
 
-# @logging(filename="mylog.txt")
-# def my_function(x, y):
-#     """Функция сложения двух чисел"""
-#     return x + y
-#
-#
-# # проверка работы функции
-# print(my_function(2, 3))
+@logging(filename="mylog.txt")
+def my_function(x, y):
+    """Функция сложения двух чисел"""
+
+    return x + y
+
+
+"проверка работы функции"
+print(my_function(2, 3))
