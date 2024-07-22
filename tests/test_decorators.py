@@ -16,11 +16,13 @@ assert result == 15
 
 
 def test_print(capsys):
-    @logging(filename="mylog.txt")
+    @logging()
     def my_function(x, y):
-        captured = capsys.readouterr()
         return x + y
-        assert captured.out == 15
+
+    my_function(7, 8)
+    captured = capsys.readouterr()
+    assert captured.out == "my_function ok\n"
 
 
 result = my_function(7, 8)
