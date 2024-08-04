@@ -1,17 +1,24 @@
-def get_mask_card_number(card_number: str) -> str | None:
-    """Returns masked card number as string
-    :param card_number:
-    :return:
-    """
-    if card_number.isdigit() and len(card_number) == 16:
-        return f"{card_number[:4]} {card_number[4:6]}{"*" * 2} {"*" * 4} {card_number[12:]}"
-    else:
-        return None
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s: %(filename)s: %(levelname)s: %(message)s",
+    filename="../logs/mask.log",
+    filemode="w",
+)
+
+logger = logging.getLogger("mask")
+def get_mask_card_number(card_number: int) -> str:
+    """Принимает на вход номер карты и возвращает ее маску."""
+    card_n = str(card_number)
+    # mask_card_number = card_n[:4] + " " + card_n[4:6] + "** **** " + card_n[-4:]
+    logger.info(f"Card mask: {card_n[:4]} {card_n[4:6]}** **** {card_n[-4:]}")
+    return f"{card_n[:4]} {card_n[4:6]}** **** {card_n[-4:]}"
 
 
-def get_mask_account(acc_number: str) -> str | None:
-    """Returns masked account number as string"""
-    if acc_number.isdigit() and len(acc_number) == 20:
-        return f"{'*' * 2} {acc_number[-4::]}"
-    else:
-        return None
+def get_mask_account(account_number: int) -> str:
+    """Принимает на вход номер счета и возвращает его маску."""
+    account_n = str(account_number)
+    # mask_account_number = "**" + account_n[-4:]
+    logger.info(f"Account mask: **{account_n[-4:]}")
+    return f"**{account_n[-4:]}"
