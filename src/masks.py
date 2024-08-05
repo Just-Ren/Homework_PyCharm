@@ -8,6 +8,8 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("mask")
+
+
 def get_mask_card_number(card_number: int) -> str:
     """Принимает на вход номер карты и возвращает ее маску."""
     card_n = str(card_number)
