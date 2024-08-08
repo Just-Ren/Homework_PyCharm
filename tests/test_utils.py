@@ -1,6 +1,8 @@
-import pytest
 from unittest.mock import patch
-from src.utils import get_transactions_dictionary, transaction_amount_in_rub, convert_to_rub
+
+import pytest
+
+from src.utils import convert_to_rub, get_transactions_dictionary, transaction_amount_in_rub
 
 
 @pytest.fixture
