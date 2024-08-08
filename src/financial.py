@@ -1,7 +1,7 @@
-import pandas as pd
 import csv
 import logging
 
+import pandas as pd
 
 logger = logging.getLogger("utils")
 file_handler = logging.FileHandler("../logs/financial.log", encoding="utf-8")
