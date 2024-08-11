@@ -1,8 +1,9 @@
 import json
+import logging
 import os
 from typing import Any
+
 import requests
-import logging
 from dotenv import load_dotenv
 from requests import RequestException
 
@@ -13,7 +14,8 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s: %(filename)s: %(levelname)s: %(message)s",
     filename="../logs/utils.log",
-    filemode="w",)
+    filemode="w",
+)
 
 logger = logging.getLogger("utils")
 
@@ -51,7 +53,7 @@ def transaction_amount_in_rub(transactions: list, transaction_id: int) -> Any:
                 transaction_convert["amount"] = transaction["operationAmount"]["amount"]
                 transaction_convert["currency"] = transaction["operationAmount"]["currency"]["code"]
                 logger.info(f"Operation amount in {transaction_convert["currency"]}:{transaction_convert["amount"]}")
-#                print(transaction_convert)
+                #                print(transaction_convert)
                 rub_amount = round(convert_to_rub(transaction_convert), 2)
                 if rub_amount != 0:
                     logger.info(f"Operation amount in RUB:{rub_amount}")

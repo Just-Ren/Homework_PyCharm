@@ -4,7 +4,6 @@ import pytest
 
 from src.read_csv import get_csv_data_dict
 from src.read_xlsx import get_xlsx_data_dict
-
 from tests.test_generators import test_info_csv, test_info_xlcx
 
 

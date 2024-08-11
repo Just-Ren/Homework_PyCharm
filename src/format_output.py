@@ -1,4 +1,4 @@
-from typing import Dict, List, Any
+from typing import Any, Dict, List
 
 from src.widget import get_data, mask_account_card
 
@@ -29,6 +29,4 @@ def get_right_format(transactions: List[Dict]) -> Any:
                 card_account = f"{card_account_1} -> {card_account_2}"
             trans_sum = transaction["operationAmount"]["amount"]
             trans_cur = transaction["operationAmount"]["currency"]["name"]
-            print(
-                f"{date} {description} \n{card_account} \nСумма: {trans_sum} {trans_cur}"
-            )
+            print(f"{date} {description} \n{card_account} \nСумма: {trans_sum} {trans_cur}")
