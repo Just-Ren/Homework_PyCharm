@@ -13,10 +13,10 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s: %(filename)s: %(levelname)s: %(message)s",
     filename="../logs/utils.log",
-    filemode="w",
-                    )
+    filemode="w",)
 
 logger = logging.getLogger("utils")
+
 
 def get_transactions_dictionary(path: str) -> Any:
     """Принимает путь до JSON-файла и возвращает список словарей с данными о финансовых транзакциях"""

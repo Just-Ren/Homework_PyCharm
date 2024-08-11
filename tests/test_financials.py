@@ -2,15 +2,17 @@ from unittest.mock import mock_open, patch
 
 import pytest
 
-from src.financial import open_csv_data, open_excel_data
+from src.read_csv import get_csv_data_dict
+from src.read_xlsx import get_xlsx_data_dict
+
 from tests.test_generators import test_info_csv, test_info_xlcx
 
 
 def test_get_info_transaction(test_info_csv, test_info_xlcx):
-    info_csv = list(open_csv_data("../data/transactions.csv"))
+    info_csv = list(get_csv_data_dict("../data/transactions.csv"))
     assert info_csv[0] == test_info_csv
 
-    info_xlsx = list(open_excel_data("../data/transactions_excel.xlsx"))
+    info_xlsx = list(get_xlsx_data_dict("../data/transactions_excel.xlsx"))
     assert info_xlsx[0] == test_info_xlcx
 
 

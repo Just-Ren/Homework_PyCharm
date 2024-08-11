@@ -1,6 +1,6 @@
 from typing import Dict, List, Any
 
-from src.widget import get_date, mask_account_card
+from src.widget import get_data, mask_account_card
 
 """transactions_list = [{'id': 5380041.0, 'state': 'CANCELED', 'date': '2021-02-01T11:54:58Z',
                       'operationAmount': {'amount': 23789.0, 'currency': {'name': 'Peso', 'code': 'UYU'}},
@@ -13,12 +13,12 @@ from src.widget import get_date, mask_account_card
 
 def get_right_format(transactions: List[Dict]) -> Any:
     """Формирует нужный формат вывода данных по транзакциям"""
-    if transactions == []:
+    if not transactions:
         return "Не найдено ни одной транзакции, подходящей под ваши условия фильтрации"
     else:
         print(f"Всего банковских операций в выборке {len(transactions)}")
         for transaction in transactions:
-            date = get_date(transaction["date"])
+            date = get_data(transaction["date"])
             description = transaction["description"]
             if description == "Открытие вклада":
                 card_account = mask_account_card(transaction["to"])
